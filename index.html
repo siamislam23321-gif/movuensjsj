@@ -1,0 +1,96 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>Movie Drive</title>
+
+<style>
+body{
+    background:#0f172a;
+    color:white;
+    font-family:Arial, sans-serif;
+    padding:20px;
+}
+h1{text-align:center;}
+.folder{
+    background:#1e293b;
+    padding:15px;
+    margin:10px 0;
+    border-radius:8px;
+    cursor:pointer;
+}
+.folder:hover{background:#334155;}
+.subfolder{
+    margin-left:20px;
+    display:none;
+}
+.link{
+    margin-left:40px;
+    margin-top:8px;
+}
+a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+<h2>🔐 সাবস্ক্রিপশন নিন</h2>
+
+<p>সকল মুভি ও গেম লিংক পেতে সাবস্ক্রিপশন প্রয়োজন</p>
+
+<ul>
+  <li>📱 bKash: 01775387928</li>
+  <li>📱 Nagad: 01XXXXXXXXX</li>
+  <li>💰 Amount: 19 টাকা (Monthly)</li>
+</ul>
+
+<p>
+Payment করার পর Screenshot পাঠান:
+<br>
+📩 WhatsApp: 01XXXXXXXXX
+</p>
+<script>
+let pass = prompt("🔐 সাবস্ক্রিপশন পাসওয়ার্ড দিন:");
+
+if(pass !== "SIAM2025"){
+  document.body.innerHTML =
+  "<h2 style='color:red;text-align:center'>❌ সাবস্ক্রিপশন ছাড়া প্রবেশ নিষেধ</h2>";
+}
+</script>
+<h1>📂 Movie Drive</h1>
+
+<!-- Main Folder -->
+<div class="folder" onclick="toggle('f1')">
+    📁 বাংলা মুভি
+</div>
+
+<!-- Movie Folder -->
+<div class="subfolder" id="f1">
+
+    <div class="folder" onclick="toggle('m1')">
+        🎬 মুভির নাম ১
+    </div>
+
+    <div class="subfolder" id="m1">
+        <div class="link">
+            🔗 <a href="GOOGLE_DRIVE_LINK" target="_blank">
+                ভিডিও দেখুন / ডাউনলোড
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function toggle(id){
+    let el = document.getElementById(id);
+    el.style.display =
+      (el.style.display === "" || el.style.display === "none")
+      ? "block" : "none";
+}
+</script>
+
+</body>
+</html>
